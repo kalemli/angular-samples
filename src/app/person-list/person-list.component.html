@@ -1,0 +1,50 @@
+<h2>Person List</h2>
+
+<table>
+    <tr>
+        <td>First name:</td>
+        <td>
+            <input type="text" class="form-control form-control-sm" [(ngModel)]="current.firstName" />
+        </td>
+    </tr>
+    <tr>
+        <td>Surname:</td>
+        <td>
+            <input type="text" class="form-control form-control-sm" [(ngModel)]="current.surname" />
+        </td>
+    </tr>
+    <tr>
+        <td>Last name:</td>
+        <td>
+            <input type="text" class="form-control form-control-sm" [(ngModel)]="current.lastName" />
+        </td>
+    </tr>
+    <tr>
+        <td>Age:</td>
+        <td>
+            <input type="text" class="form-control form-control-sm" [(ngModel)]="current.age" />
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <button class="btn btn-sm btn-primary" (click)="add()">Add Person</button>
+        </td>
+    </tr>
+</table>
+
+<table class="table table-sm table-hover table-bordered">
+    <thead>
+        <th>Id</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Surname</th>
+        <th>Age</th>
+    </thead>
+    <tr *ngFor="let person of personList">
+        <td>{{ person.id }}</td>
+        <td>{{ person.firstName }}</td>
+        <td>{{ person.surname }}</td>
+        <td>{{ person.lastName }}</td>
+        <td>{{ person.age }}</td>
+    </tr>
+</table>
