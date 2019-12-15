@@ -39,6 +39,7 @@
         <th>Last name</th>
         <th>Surname</th>
         <th>Age</th>
+        <th>#</th>
     </thead>
     <tr *ngFor="let person of personList">
         <td>{{ person.id }}</td>
@@ -46,5 +47,8 @@
         <td>{{ person.surname }}</td>
         <td>{{ person.lastName }}</td>
         <td>{{ person.age }}</td>
+        <td>
+            <button class="btn btn-sm btn-primary" (click)="edit(person)">Edit</button>
+        </td>
     </tr>
 </table>

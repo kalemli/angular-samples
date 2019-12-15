@@ -19,8 +19,14 @@ export class PersonListComponent implements OnInit {
   }
 
   public add() {
-    this.current.id = this.seq++;
-    this.personList.push(this.current);
+    console.log(this.current.id);
+    if (this.current.id == undefined) {
+      this.current.id = this.seq++;
+      this.personList.push(this.current);
+    }
     this.current = new Person();
+  }
+  public edit(person: Person) {
+    this.current = person;
   }
 }
